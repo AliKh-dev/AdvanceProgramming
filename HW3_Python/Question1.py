@@ -11,4 +11,4 @@ def key_max_and_min_value(values: dict) -> str:
     return key_maximum, key_minimum
 
 
-print(key_max_and_min_value({'Theodore': 19, 'Roxanne': 22, 'Mathew': 21, 'Betty': 20}))
+# print(key_max_and_min_value({'Theodore': 19, 'Roxanne': 22, 'Mathew': 21, 'Betty': 20}))
