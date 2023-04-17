@@ -1,12 +1,13 @@
 # This function find key of maximum and minimum value which in the dict
-def key_max_and_min_value(values: dict) -> str:
-    maximum = max(values.values())
-    minimum = min(values.values())
+def key_max_and_min_value(entry: dict) -> str:
+    maximum = max(entry.values())
+    minimum = min(entry.values())
     key_maximum = None
-    for key in values.keys():
-        if values[key] == maximum:
+    key_minimum = None
+    for key in entry.keys():
+        if entry[key] == maximum:
             key_maximum = key
-        if values[key] == minimum:
+        if entry[key] == minimum:
             key_minimum = key
     return key_maximum, key_minimum
 
