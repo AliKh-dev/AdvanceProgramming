@@ -166,7 +166,7 @@ class Employee:
 
 
     def __str__(self) -> str:
-        print(f"ID: {self.id}\nFull Name: {self.name}\nDepartment: {self.__department}")
+        return f"ID: {self.id}\nFull Name: {self.name}\nDepartment: {self.__department}"
 
 
     def calculate_emp_salary(self, hours_of_work:int):
