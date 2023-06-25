@@ -3,3 +3,12 @@ implement bank account with set and get balance and withdraw and deposit nmethod
 
 map and filter and reduce from functools
 implement matrix class with multiply, add, validate method
+
+ABC and abstract from abc
+
+BanckAccount with filed:  name, id, date_of_opening, balance
+		  method: __intit__, withdraw, deposit, check_balance
+
+
+Employee with filed: id, name, init_salary, department
+	      method: change_departent, assign_department, __str__, clalulate_tax, calculate_salary, check_salary
