@@ -154,3 +154,49 @@ class BankAccount():
 
 print("--------------------------------------")
 # --------------------------------------------------------------------------------
+
+
+class Employee:
+    def __init__(self, emp_id, emp_name, init_salary, department) -> None:
+        self.id = emp_id
+        self.name = emp_name
+        # initial salary as private
+        self.__initial_salary = init_salary
+        self.assign_department(department)
+
+
+    def __str__(self) -> str:
+        print(f"ID: {self.id}\nFull Name: {self.name}\nDepartment: {self.__department}")
+
+
+    def calculate_emp_salary(self, hours_of_work:int):
+        # set salary as private filed
+        if hours_of_work > 50:
+            self.__salary = self.__initial_salary + (hours_of_work - 50) * 12
+        else:
+            self.__salary = self.__initial_salary
+        return self.__salary
+
+
+    def check_salary(self) -> float:
+        return self.__salary
+
+
+    def calculate_tax(self, tax_rate) -> float:
+        self.__amount_of_tax = self.__salary * tax_rate
+        self.__salary -= self.__amount_of_tax
+        return self.__amount_of_tax
+
+
+    def assign_department(self, department) -> None:
+        self.__department = department
+
+
+    def change_department(self, new_department) -> None:
+        self.__department = new_department
+
+
+    def check_department(self) -> str:
+        return self.__department
+
+
