@@ -1,0 +1,5 @@
+private and protected method or field + getter and setter
+implement bank account with set and get balance and withdraw and deposit nmethod
+
+map and filter and reduce from functools
+implement matrix class with multiply, add, validate method
