@@ -7,8 +7,8 @@ class Parent():
         print(f"att1: {self.attr1}, attr2: {self.attr2}")
 
 class Child(Parent):
-    def set_type(self, entery):
-        self.child_type = entery
+    def set_type(self, entry):
+        self.child_type = entry
 
     def get_type(self):
         print(self.child_type)
@@ -21,7 +21,7 @@ class Child2(Parent, Parent2):
     def set_type(self, entry):
         self.type = entry
 
- 
+
 parent_obj = Parent("data1", "data2")
 child_obj = Child("data3","data4")
 child_obj.set_type(12)

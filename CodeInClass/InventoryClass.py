@@ -18,6 +18,6 @@ class Inventory:
 inventory1 = Inventory(1001, "Speakers", 800, 560)
 inventory1.add_item(1002, "Laptop", 760, 1560)
 inventory1.add_item(1001, "Speakers", 560)
-inventory1.update_item(1002, "LaptopAsuse", 90, 1290)
+inventory1.update_item(1002, "LaptopLenovo", 90, 1290)
 inventory1.check_item_details()
 
