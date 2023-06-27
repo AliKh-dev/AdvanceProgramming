@@ -1,3 +1,110 @@
+# function can assign to variable
+def shout(message):
+    return message.upper()
+
+print(shout("Hello"))
+yell = shout
+print(yell("hello from yell"))
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+# function can pass as argument
+def whisper(message):
+    print(message.lower())
+
+def greeting(function):
+    greet = function("this message from greeting, hello!")
+    return greet
+
+print(greeting(shout))
+print(greeting(whisper))
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+# function can be return from another function
+def create_adder(number1):
+    def adder(number2):
+        return number1 + number2
+    return adder
+
+adder1 = create_adder(15)
+print(adder1(20))
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+# Decorator
+
+def decorator(function):
+    def inner():
+        print("before execute function!")
+        function()
+        print("after execute function!")
+    return inner
+
+def function_to_be_use():
+    print("message here!")
+
+function_to_be_use = decorator(function_to_be_use)
+function_to_be_use()
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+# *arg
+def myFunc(*argv):
+    for arg in argv:
+        print(arg)
+
+myFunc("hello", "this", "message", "from", "Ali")
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+
+# **kwargs
+def myFun(**kwargs):
+	for key, value in kwargs.items():
+		print("%s == %s" % (key, value))
+
+myFun(first='Geeks', mid='for', last='Geeks')
+
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+# pro Decorator
+from time import time, sleep
+import math
+
+def calculate_time(func):
+    def inner(*args, **kwargs):
+        begin = time()
+        func(*args, **kwargs)
+        end = time()
+        print(f"Total time given: {func.__name__}, {end - begin}")
+    return inner
+
+@calculate_time
+def factorial(num):
+    sleep(2)
+    print(math.factorial(num))
+
+factorial(5)
+
+
+print("--------------------------------------")
+# --------------------------------------------------------------------------------
+
+
+
 # Matrix class
 class Matrix:
     def __init__(self, matrix:list) -> None:
@@ -139,7 +246,7 @@ class BankAccount():
 
     def withdraw(self, amount_of_money):
         if amount_of_money > self.__balance:
-            print("This operation can't be done beacuase you don't have enough money!")
+            print("This operation can't be done because you don't have enough money!")
             return
         self.__balance -= amount_of_money
 
